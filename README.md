@@ -166,7 +166,7 @@ I'm available to meet by appointment in person or by Skype/Google Hangouts. Plea
 
 ## Office Hours and General Help
 
-I'm available to meet by appointment in person or by Skype/Google Hangouts. Please email me at lavigne@nyu.edu to schedule a meeting, or if you have any questions or concerns about the class.
+I'm available to meet by appointment in person or by Skype/Google Hangouts. Please email me at lavignse@newschool.edu to schedule a meeting, or if you have any questions or concerns about the class.
 
 ***
 
