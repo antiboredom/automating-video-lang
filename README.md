@@ -149,13 +149,6 @@ If you are going to be very late or can't come to class for whatever reason plea
 
 I'm available to meet by appointment in person or by Skype/Google Hangouts. Please email me at lavignes@newschool.edu to schedule a meeting, or if you have any questions or concerns about the class.
 
-## Grading
-* Participation: 25%.
-* To turn in your projects, add them to the [class homework wiki](https://github.com/antiboredom/automating-video-itp/wiki). (Just hit the edit button)
-* Please come to class, and be on time!
-* Coming to class more than 20 minutes late counts as an absence.
-* More than two unexcused absence is grounds for failure.
-* But no one will fail.
 
 ## Expectations and general notes
 * It's OK to show work that has sensitive or difficult content, but if you do so give everyone a quick heads up beforehand.
@@ -163,10 +156,6 @@ I'm available to meet by appointment in person or by Skype/Google Hangouts. Plea
 * Feel free to use your laptop in class to take notes or follow along when I'm covering programming topics. Please do not use your laptops to do stuff on social media unrelated to the class etc.
 * The only time laptop use is strictly prohibited is when other students are presenting their work.
 * Turn off your phones or put them on silent during class
-
-## Office Hours and General Help
-
-I'm available to meet by appointment in person or by Skype/Google Hangouts. Please email me at lavignse@newschool.edu to schedule a meeting, or if you have any questions or concerns about the class.
 
 ***
 
