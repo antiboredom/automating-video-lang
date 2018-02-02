@@ -148,3 +148,9 @@ Chromakey overlay:
 ```
 ffmpeg -i background.mp4 -i foreground.mp4 -filter_complex "[1]colorkey=0xffffff:0.5:0.1[fg];[0][fg]overlay[out]" -map "[out]" together.mp4
 ```
+
+or
+
+```
+ffmpeg -i background.mp4 -i foreground.mp4 -filter_complex "[1]chromakey=green:0.5:0.1[fg];[0][fg]overlay[out]" -map "[out]" together.mp4
+```
