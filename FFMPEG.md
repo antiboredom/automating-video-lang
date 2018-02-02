@@ -154,3 +154,10 @@ or
 ```
 ffmpeg -i background.mp4 -i foreground.mp4 -filter_complex "[1]chromakey=green:0.5:0.1[fg];[0][fg]overlay[out]" -map "[out]" together.mp4
 ```
+
+Record from a webcam (on mac) for 10 seconds and save to file
+
+```
+ffmpeg -f avfoundation -pixel_format yuyv422 -framerate 30 -video_size 1280x720 -i 0:0 -t 00:00:10 -y webcamrecord.mp4
+```
+
