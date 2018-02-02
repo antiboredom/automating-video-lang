@@ -136,3 +136,10 @@ Stitch together all mp4s in a folder:
 ```
 ffmpeg -safe 0 -f concat -i <(for f in /path/to/folder/*.mp4; do echo "file '$f'"; done) -c copy output.mp4
 ```
+
+Overlay audio on to video:
+
+```
+ffmpeg -i input.mp4 -i input.mp3 -c copy -map 0:v:0 -map 1:a:0 output.mp4
+```
+
