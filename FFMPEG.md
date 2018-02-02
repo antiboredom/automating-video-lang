@@ -134,5 +134,5 @@ ffmpeg -i input.mp4 -vf ""[0:v]minterpolate=fps=120:mi_mode=mci[out];[out]setpts
 Stitch together all mp4s in a folder:
 
 ```
-ffmpeg -f concat -i <(for f in /path/to/folder/*.mp4; do echo "file '$f'"; done) -c copy output.mp4
+ffmpeg -safe 0 -f concat -i <(for f in /path/to/folder/*.mp4; do echo "file '$f'"; done) -c copy output.mp4
 ```
