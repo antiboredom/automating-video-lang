@@ -1,6 +1,6 @@
 # Videogrep
 
-Videogrep lets you make supercuts based on the spoken word content of videos. In order for it to work you need to have either a subtitle file (ending with ```.srt```) or a transcription.
+Videogrep lets you make supercuts based on the spoken word content of videos. In order for it to work you need to have either a subtitle file (ending with ```.srt```), a vtt file (ending with ```.vtt```) or a transcription.
 
 Documentation can be found at: [http://antiboredom.github.io/videogrep/](http://antiboredom.github.io/videogrep/)
 
@@ -61,6 +61,9 @@ videogrep --input myvideo.mp4 --search '^why|^because' --output questions_and_an
 
 
 ### Searching for categories of words
+
+**Note:** You must first install pattern.en to search for word categories. To do so, run `pip install pattern` 
+
 You can add the ```--search-type``` flag to search for grammatical patterns or categories of words.
 
 To search for grammatical patterns, add ```--search-type pos``` to the command, and then search for parts of speech tags instead of words. 
@@ -112,6 +115,70 @@ videogrep --input myvideo.mp4 --use-transcript --search "trump"
 ```
 
 The ```--search-type``` flag will work with transcribed videos also.
+
+## Common workflows
+
+Here are a few examples of how you might use videogrep:
+
+#### Download videos from youtube and make supercuts with their .vtt files
+
+1) Download a video and .vtt subtitle file from youtube, and save the video as an mp4:
+
+```
+youtube-dl https://www.youtube.com/watch?v=CWck2xoZkJM -f 22 --write-auto-sub
+```
+
+2) Show the most frequently used words from the video
+
+```
+videogrep --input biden.mp4 --use-vtt --ngrams 1
+```
+
+3) Extract all the sentences that have the word "president" in them and save to a file called `president.mp4`
+
+```
+videogrep --input biden.mp4 --use-vtt --search "president" --output president.mp4
+```
+
+4) Extract all the individual words "president"
+
+```
+videogrep --input biden.mp4 --use-vtt --search "president" --search-type "word" --output president.mp4
+```
+
+#### Transcribe a video you already have downloaded and use the transcription
+
+1) Transcribe a video
+
+```
+videogrep --input somevideo.mp4 --transcribe
+```
+
+2) Show most frequently used words
+
+```
+videogrep --input somevideo.mp4 --use-transcript --ngrams 1
+```
+
+3) Create a supercut with the word "whatever"
+
+```
+videogrep --input somevideo.mp4 --use-transcript --search "whatver" --search-type "word" --output whatever.mp4
+```
+
+#### Download an entire playlist from youtube and make a supercut
+
+1) Download a playlist as a series of mp4s and also save subtitle (.vtt) files
+
+```
+youtube-dl https://www.youtube.com/playlist?list=PLRJNAhZxtqH_3Nl-7n1vhgTUHyFSuQ0nI -f 22 --write-auto-sub
+```
+
+2) Create a supercut with the entire playlist
+
+```
+videogrep --input *.mp4 --use-vtt --search "question" --search-type "word" --output questions.mp4
+```
 
 
 ## Using Videogrep from Python
